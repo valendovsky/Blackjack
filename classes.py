@@ -23,4 +23,4 @@ class Card:
 
     # Playing card text
     def __repr__(self):
-        return f'{self.rank[0]}{self.suit[0]}'
+        return f'{self.rank}{self.suit[0]}'

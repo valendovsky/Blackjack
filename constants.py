@@ -1,5 +1,5 @@
 # File adress
-FILE_ADDRESS = 'source/file_settings.txt'
+FILE_ADDRESS = 'source/file-settings.txt'
 
 # BlackJack settings
 DECK_NUM = 'deck_num'
@@ -17,3 +17,7 @@ SHUFFLE_MIN = 3.5
 SHUFFLE_MAX = 4.5
 PLAYERS_MIN = 1
 PLAYERS_MAX = 7
+
+# Cards signs
+SUITS = ['Hearts', 'Clubs', 'Diamonds', 'Spades']
+RANKS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
