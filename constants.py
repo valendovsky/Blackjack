@@ -16,3 +16,7 @@ SHUFFLE_MIN = 3.5
 SHUFFLE_MAX = 4.5
 PLAYERS_MIN = 1
 PLAYERS_MAX = 7
+
+# Card signs
+SUIT_LIST = ['Hearts', 'Clubs', 'Diamonds', 'Spades']
+RANK_LIST = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']

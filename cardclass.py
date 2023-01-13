@@ -1,17 +1,14 @@
 # Card class
+from constants import *
 
 class Card:
-    suit_list = ['Hearts', 'Clubs', 'Diamonds', 'Spades']
-    rank_list = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
 
     # Initialize the suit and rank of the card
     def __init__(self, suit, rank):
-        self.suit = suit
-        self.rank = rank
-        if self.suit not in Card.suit_list:
-            print("Значение карты должно быть 'Jack', 'Queen', 'King', 'Ace' или же целым числом, надо исправить!")
-            exit()
-        elif self.rank not in Card.rank_list:
+        if suit in SUIT_LIST and rank in RANK_LIST:
+            self.suit = suit
+            self.rank = rank
+        else:
             print("Значение карты должно быть 'Jack', 'Queen', 'King', 'Ace' или же целым числом, надо исправить!")
             exit()
 
