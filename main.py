@@ -41,10 +41,6 @@ def get_deck(deck):
         for rank in RANK_LIST:
             deck.append(Card(suit, rank))
 
-# This function shuffles six decks
-def shuffle_deck(deck):
-    shuffle(deck)
-
 
 
 def main():
@@ -61,11 +57,6 @@ def main():
     print('Debug #2: ', deck)
 
     deck = deck * DECK_VALUE
-
-    shuffle = shuffle_deck(deck)
-
-    # Debug №3
-    print('Debug #3: ', deck)
 
 
 
