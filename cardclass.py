@@ -9,15 +9,15 @@ class Card:
             self.suit = suit
             self.rank = rank
         else:
-            print("Значение карты должно быть 'Jack', 'Queen', 'King', 'Ace' или же целым числом, надо исправить!")
+            print("Значение карты должно быть 'J', 'Q', 'K', 'A' или же целым числом, надо исправить!")
             exit()
 
     # Method for identifying the face value of the card
     def nominal(self):
         nominal = 0
-        if self.rank == 'Jack' or self.rank == 'Queen' or self.rank == 'King':
+        if self.rank == 'J' or self.rank == 'Q' or self.rank == 'K':
             nominal = 10
-        elif self.rank == 'Ace':
+        elif self.rank == 'A':
             nominal = 11
         else:
             nominal = int(self.rank)
@@ -25,7 +25,4 @@ class Card:
 
     # Playing card text
     def __repr__(self):
-        if self.rank == '10':
-            return f'{self.rank[0]}{self.rank[1]}{self.suit[0]}'
-        else:
-            return f'{self.rank[0]}{self.suit[0]}'
+        return f'{self.rank}{self.suit[0]}'

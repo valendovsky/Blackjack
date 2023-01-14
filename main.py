@@ -1,7 +1,7 @@
 # Карточная игра BlackJack
 from constants import *
 from cardclass import *
-import random
+from random import shuffle
 
 
 # This function reads information from a settings text file and checks the received data for errors.
@@ -35,13 +35,16 @@ def get_settings():
     exit()
 
 
-# This function generates a deck of cards for playing BlackJack.
+# This function completes the deck list to form a deck of cards.
 def get_deck(deck):
     for suit in SUIT_LIST:
         for rank in RANK_LIST:
             deck.append(Card(suit, rank))
-    jackdeck = deck * DECK_VALUE
-    return jackdeck
+
+# This function shuffles six decks
+def shuffle_deck(deck):
+    shuffle(deck)
+
 
 
 def main():
@@ -55,8 +58,14 @@ def main():
     deckjack = get_deck(deck)
 
     # Debug №2
-    print('Debug #2: ', deckjack)
+    print('Debug #2: ', deck)
 
+    deck = deck * DECK_VALUE
+
+    shuffle = shuffle_deck(deck)
+
+    # Debug №3
+    print('Debug #3: ', deck)
 
 
 
