@@ -1,6 +1,6 @@
 # Карточная игра BlackJack
 from constants import *
-from cardclass import *
+from card_class import *
 from random import shuffle
 
 
@@ -36,27 +36,43 @@ def get_settings():
 
 
 # This function completes the deck list to form a deck of cards.
+# Output parameter
 def get_deck(deck):
     for suit in SUIT_LIST:
         for rank in RANK_LIST:
             deck.append(Card(suit, rank))
 
 
+# This feature shuffles six blackjack decks.
+# Output parameter
+def shuffle_deck(deck):
+    # The algorithm implements a pseudo-random number generator
+    shuffle(deck)
+
 
 def main():
-    deck = []
-
     settings = get_settings()
 
     # Debug
     print('Debug #1: ', settings)
 
-    deckjack = get_deck(deck)
+    deck = []
+
+    get_deck(deck)
 
     # Debug №2
     print('Debug #2: ', deck)
 
     deck = deck * DECK_VALUE
+
+    # Debug №3
+    print('Debug #3: ', deck)
+
+    shuffle_deck(deck)
+
+    # Debug №4
+    print('Debug #4: ', deck)
+
 
 
 
