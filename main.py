@@ -37,18 +37,18 @@ def get_settings():
 
 # This function completes the deck list to form a deck of cards.
 # Output parameter
-def get_deck(deck):
+def get_deck(out_deck):
     for suit in Card.suits:
         for rank in Card.ranks:
-            deck.append(Card(suit, rank))
-    deck *= DECK_VALUE
+            out_deck.append(Card(suit, rank))
+    out_deck *= DECK_VALUE
 
 
 # This feature shuffles six blackjack decks.
 # Output parameter
-def shuffle_deck(deck):
+def shuffle_deck(out_deck):
     # Fisher-Yates Shuffle Algorithm
-    shuffle(deck)
+    shuffle(out_deck)
 
 
 def main():
@@ -64,7 +64,6 @@ def main():
     # Debug №2
     print('Debug #2: ', deck)
 
-    deck = deck * DECK_VALUE
 
     # Debug №3
     print('Debug #3: ', deck)
