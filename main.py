@@ -1,5 +1,7 @@
 # Карточная игра BlackJack
 from constants import *
+from card_class import *
+from random import shuffle
 
 
 # This function reads information from a settings text file and checks the received data for errors.
@@ -7,7 +9,7 @@ def get_settings():
     with open(FILE_ADDRESS, 'r') as rd:
         lst = rd.readlines()
 
-    dict_settings = {DECK_NUM: DECK_VALUE}
+    dict_settings = {}
     # The next block checks the received information by data type
     try:
         dict_settings[POINT_SHUFFLE] = float(lst[0])
@@ -33,11 +35,45 @@ def get_settings():
     exit()
 
 
+# This function completes the deck list to form a deck of cards.
+# Output parameter
+def get_deck(out_deck):
+    for suit in Card.suits:
+        for rank in Card.ranks:
+            out_deck.append(Card(suit, rank))
+    out_deck *= DECK_VALUE
+
+
+# This feature shuffles six blackjack decks.
+# Output parameter
+def shuffle_deck(out_deck):
+    # Fisher-Yates Shuffle Algorithm
+    shuffle(out_deck)
+
+
 def main():
     settings = get_settings()
 
     # Debug
     print('Debug #1: ', settings)
+
+    deck = []
+
+    get_deck(deck)
+
+    # Debug №2
+    print('Debug #2: ', deck)
+
+
+    # Debug №3
+    print('Debug #3: ', deck)
+
+    shuffle_deck(deck)
+
+    # Debug №4
+    print('Debug #4: ', deck)
+
+
 
 
 if __name__ == '__main__':

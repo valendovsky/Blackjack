@@ -2,7 +2,6 @@
 FILE_ADDRESS = 'source/file_settings.txt'
 
 # BlackJack settings
-DECK_NUM = 'deck_num'
 POINT_SHUFFLE = 'point_shuffle'
 CONNECTION = 'connection'
 PLAYERS_NUM = 'players_num'
