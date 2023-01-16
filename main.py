@@ -47,7 +47,7 @@ def get_deck(deck):
 # This feature shuffles six blackjack decks.
 # Output parameter
 def shuffle_deck(deck):
-    # The algorithm implements a pseudo-random number generator
+    # Fisher-Yates Shuffle Algorithm
     shuffle(deck)
 
 
