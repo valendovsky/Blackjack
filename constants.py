@@ -1,5 +1,5 @@
 # File adress
-FILE_ADDRESS = 'source/file-settings.txt'
+FILE_ADDRESS = 'source/file_settings.txt'
 
 # BlackJack settings
 POINT_SHUFFLE = 'point_shuffle'

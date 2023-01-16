@@ -38,9 +38,10 @@ def get_settings():
 # This function completes the deck list to form a deck of cards.
 # Output parameter
 def get_deck(deck):
-    for suit in SUIT_LIST:
-        for rank in RANK_LIST:
+    for suit in Card.suits:
+        for rank in Card.ranks:
             deck.append(Card(suit, rank))
+    deck *= DECK_VALUE
 
 
 # This feature shuffles six blackjack decks.

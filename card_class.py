@@ -2,10 +2,12 @@
 from constants import *
 
 class Card:
+    suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades']
+    ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 
     # Initialize the suit and rank of the card
     def __init__(self, suit, rank):
-        if suit in SUIT_LIST and rank in RANK_LIST:
+        if suit in Card.suits and rank in Card.ranks:
             self.suit = suit
             self.rank = rank
         else:
