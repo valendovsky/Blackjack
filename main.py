@@ -41,6 +41,7 @@ def get_deck(out_deck):
     for suit in Card.suits:
         for rank in Card.ranks:
             out_deck.append(Card(suit, rank))
+
     out_deck *= DECK_VALUE
 
 
@@ -53,27 +54,17 @@ def shuffle_deck(out_deck):
 
 def main():
     settings = get_settings()
-
     # Debug
     print('Debug #1: ', settings)
 
     deck = []
-
     get_deck(deck)
-
     # Debug №2
     print('Debug #2: ', deck)
 
-
+    shuffle_deck(deck)
     # Debug №3
     print('Debug #3: ', deck)
-
-    shuffle_deck(deck)
-
-    # Debug №4
-    print('Debug #4: ', deck)
-
-
 
 
 if __name__ == '__main__':

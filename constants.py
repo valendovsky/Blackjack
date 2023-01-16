@@ -1,4 +1,4 @@
-# File adress
+# File address
 FILE_ADDRESS = 'source/file_settings.txt'
 
 # BlackJack settings
