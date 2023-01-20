@@ -51,27 +51,27 @@ def shuffle_deck(out_deck):
     shuffle(out_deck)
 
 
+# This function outputs six decks shuffled in rows of 52
+def print_deck(row_deck):
+    for i in range(len(row_deck)):
+        if not i % 52 == 0:
+            print(row_deck[i], end=' ')
+        else:
+            print('')
+    print('\n')
+
+
+
 def main():
     settings = get_settings()
-
-    # Debug
-    print('Debug #1: ', settings)
 
     deck = []
 
     get_deck(deck)
 
-    # Debug №2
-    print('Debug #2: ', deck)
-
-
-    # Debug №3
-    print('Debug #3: ', deck)
-
     shuffle_deck(deck)
 
-    # Debug №4
-    print('Debug #4: ', deck)
+    print_deck(deck)
 
 
 
